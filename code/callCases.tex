@@ -1,0 +1,190 @@
+% This LaTeX was auto-generated from MATLAB code.
+% To make changes, update the MATLAB code and export to LaTeX again.
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{epstopdf}
+\usepackage[table]{xcolor}
+\usepackage{matlab}
+
+\sloppy
+\epstopdfsetup{outdir=./}
+\graphicspath{ {./callCases_images/} }
+
+\matlabhastoc
+
+\begin{document}
+
+\label{T_E556197A}
+\matlabtitle{An information upper bound for probability sensitivity }
+
+\matlabtableofcontents{Table of Contents}
+
+\label{H_E1FD32AA}
+\matlabheading{1. Introduction }
+
+\begin{par}
+\begin{flushleft}
+Consider a function $y=h(x)$ where the input is uncertain. Probabilistic sensitivity analysis identifies the influential inputs to guide decision makings. Of practical concern is the probability that the output would, or would not, exceed a threshold, and the probability sensitivity depends on this threshold that is often uncertain. We present a mathematical proof that the information theoretical metrics provide upper bound for the probability sensitivity, i.e. 
+\end{flushleft}
+\end{par}
+
+\begin{par}
+$$\begin{array}{l}
+\\
+{\left\|\frac{\partial P_{{\mathrm{f}}} \left(b,z\right)}{\partial b}\right\|}^2 \le {\mathrm{t}\mathrm{r}}\left\lbrace F\left(b\right)\right\rbrace \\
+
+\end{array}$$
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+where $\mathbf{b}$ is the parameter of the uncertain inputs and $P_{\textrm{f}}$ is the failure (or acceptance) probability that depends on the threshold $z$. The matrix $\mathbf{F}$ is the symmetric semi-positive definite Fisher Information Matrix (FIM) . The proof is elementary, relying only on a special version of the Cauchy-Schwarz inequality called Titu’s lemma. The proof presented makes no assumption of the functional form of the probability measure. Nevertheless, in the simple but common case where the probability of interest is simply the (complementary) cumulative distribution function, the bound for the perturbation of the probability by the K-L divergence is found to be a consequence of the well-known Pinsker’s inequality. The details of the mathematical proof can be found in the paper. 
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+Using the information processing inequality, the sensitivity bound for the probability has been extended to the Fisher information of both the uncertain input and output. The Fisher information of the input is shown as the weaker bound. The extended inequality has been demonstrated with a few numerical examples, where an efficient Monte Carlo based Likelihood Ratio method has been applied for the sensitivity computation. 
+\end{flushleft}
+\end{par}
+
+
+\label{H_D2628D62}
+\matlabheading{2. Demonstration examples }
+
+
+\vspace{1em}
+\label{H_61153BCB}
+\matlabheadingtwo{2.1 Case-1 }
+
+\begin{par}
+\begin{flushleft}
+Case 1 considers a trivial function $y=x$, where the random variables follow the Normal distribution, i.e. $y=x\sim \mathcal{N}(\mu ,\sigma^2 )$
+\end{flushleft}
+\end{par}
+
+\label{H_8FD8EBB7}
+\matlabheadingtwo{2.2 Case-2}
+
+\begin{par}
+\begin{flushleft}
+Case-2 considers a simple harmonic oscillator (SHO), e.g., a mass on spring or a simple pendulum
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\includegraphics[width=\maxwidth{28.700451580531862em}]{image_0}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+This is subject to a harmonic driving force, its frequency response function can be described non-dimensionally as 
+\end{flushleft}
+\end{par}
+
+\begin{par}
+$$\begin{array}{l}
+\\
+H={\left\lbrack 1-\beta^2 +i2\zeta \beta \right\rbrack }^{-1} \\
+
+\end{array}$$
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+where $\beta =\omega /\omega_n$ is the ratio between the forcing frequency $\omega \;$and the natural frequency of the SHO $\omega_n$, and $\zeta \;$ is the non-dimensional viscous damping factor. In this example, both $\beta \;$ and $\zeta \;$are considered to be random and follow the Normal distribution.  
+\end{flushleft}
+\end{par}
+
+\label{H_2D477B1C}
+\matlabheadingtwo{2.3 Case-3}
+
+\begin{par}
+\begin{flushleft}
+Case-3 considers a cantilever beam that is subject to a bandlimited white noise excitation, where only the first three modes are excited, at the middle span position. 
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+\includegraphics[width=\maxwidth{39.13697942799799em}]{image_1}
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+In this case, the outputs of interest are the peak r.m.s acceleration and strain responses along the beam, where the r.m.s response, for both acceleration and strain, can be obtained as 
+\end{flushleft}
+\end{par}
+
+\begin{par}
+$$\begin{array}{l}
+\\
+y\left(\xi \right)=\sqrt{\sum 2S\left(\xi ,\omega \right){\mathrm{d}}\omega }\\
+
+\end{array}$$
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+where $S$ is the response spectrum. 
+\end{flushleft}
+\end{par}
+
+
+\label{H_1404BDDC}
+\matlabheading{3. Call\_TEDS}
+
+\begin{matlabcode}
+caseNo = 3
+\end{matlabcode}
+\begin{matlaboutput}
+caseNo = 3
+\end{matlaboutput}
+\begin{matlabcode}
+[yExLevel,RandV,Opts] = call_case (caseNo); 
+[Fraw,PfSen_v_norm,ListPar]   = call_TEDS (Opts,RandV,yExLevel,caseNo);
+\end{matlabcode}
+\begin{matlaboutput}
+Monte Carlo Analysis Starts: ...
+\end{matlaboutput}
+\begin{center}
+\includegraphics[width=\maxwidth{36.12644254892123em}]{figure_0.png}
+\end{center}
+\begin{matlaboutput}
+Analysis Completed:103.73[s]
+Estimating Fisher: ...
+Fisher EigenAnalysis Completed:0.11[s]
+\end{matlaboutput}
+
+\label{H_4B7440F4}
+\matlabheading{4. Display}
+
+\begin{matlabcode}
+figName = disp_case (Fraw,PfSen_v_norm,RandV,ListPar,Opts,yExLevel,caseNo)
+\end{matlabcode}
+\begin{matlaboutput}
+figName = 'cantilever'
+\end{matlaboutput}
+\begin{matlabcode}
+% export figures
+isExportFig = 1;
+paperPath = 'C:\Users\jy419\OneDrive - University Of Cambridge\Project\1.Working\1.DT-Overview\Papers\Fisher Sensitivity\Covariance sensitivity\figs';
+exportFig(isExportFig,paperPath,figName);
+\end{matlabcode}
+\begin{center}
+\includegraphics[width=\maxwidth{91.03863522328149em}]{figure_1.eps}
+\end{center}
+
+\end{document}
