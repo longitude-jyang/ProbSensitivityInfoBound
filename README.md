@@ -37,7 +37,7 @@ Case-2 considers a simple harmonic oscillator (SHO), e.g., a mass on spring or a
 
 
 
-![image_0.png](callCases_images/image_0.png)
+<img src= "docs/callCases_images/image_0.png" width = "400">
 
 
 
@@ -64,7 +64,7 @@ Case-3 considers a cantilever beam that is subject to a bandlimited white noise 
 
 
 
-![image_1.png](callCases_images/image_1.png)
+<img src="docs/callCases_images/image_1.png" width="500">
 
 
 
@@ -106,7 +106,7 @@ Monte Carlo Analysis Starts: ...
 ```
 
 
-![figure_0.png](callCases_images/figure_0.png)
+![figure_0.png](docs/callCases_images/figure_0.png)
 
 
 ```text:Output
@@ -135,5 +135,5 @@ exportFig(isExportFig,paperPath,figName);
 ```
 
 
-![figure_1.eps](callCases_images/figure_1.eps)
+![figure_1.eps](docs/callCases_images/figure_1.eps)
 
