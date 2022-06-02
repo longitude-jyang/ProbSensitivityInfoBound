@@ -13,7 +13,7 @@ $$\begin{array}{l}
 
 
 
-where $\bf b$ is the parameter of the uncertain inputs and $P_\text{f}$ is the failure (or acceptance) probability that depends on the threshold $z$. The matrix <img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathbf{F}"/> is the symmetric semi-positive definite Fisher Information Matrix (FIM) . The proof is elementary, relying only on a special version of the Cauchy-Schwarz inequality called Titu’s lemma. The proof presented makes no assumption of the functional form of the probability measure. Nevertheless, in the simple but common case where the probability of interest is simply the (complementary) cumulative distribution function, the bound for the perturbation of the probability by the K-L divergence is found to be a consequence of the well-known Pinsker’s inequality. The details of the mathematical proof can be found in the paper. 
+where $\bf b$ is the parameter of the uncertain inputs and $P_\text{f}$ is the failure (or acceptance) probability that depends on the threshold $z$. The matrix $\bf F$ is the symmetric semi-positive definite Fisher Information Matrix (FIM) . The proof is elementary, relying only on a special version of the Cauchy-Schwarz inequality called Titu’s lemma. The proof presented makes no assumption of the functional form of the probability measure. Nevertheless, in the simple but common case where the probability of interest is simply the (complementary) cumulative distribution function, the bound for the perturbation of the probability by the K-L divergence is found to be a consequence of the well-known Pinsker’s inequality. The details of the mathematical proof can be found in the paper. 
 
 Using the information processing inequality, the sensitivity bound for the probability has been extended to the Fisher information of both the uncertain input and output. The Fisher information of the input is shown as the weaker bound. The extended inequality has been demonstrated with a few numerical examples, where an efficient Monte Carlo based Likelihood Ratio method has been applied for the sensitivity computation. 
 
@@ -48,7 +48,7 @@ H={\left\lbrack 1-\beta^2 +i2\zeta \beta \right\rbrack }^{-1} \\
 
 
 
-where $\omega/\omega_n$ is the ratio between the forcing frequency $\omega$ and the natural frequency of the SHO $\omega_n$, and $\zeta$ is the non-dimensional viscous damping factor. In this example, both $\beta$ and $\zeta$ are considered to be random and follow the Normal distribution.  
+where $\beta = \omega/\omega_n$ is the ratio between the forcing frequency $\omega$ and the natural frequency of the SHO $\omega_n$, and $\zeta$ is the non-dimensional viscous damping factor. In this example, both $\beta$ and $\zeta$ are considered to be random and follow the Normal distribution.  
 
 The function used for this case to get the response is [design_1dof.m](/code/design_1dof.m)
 
