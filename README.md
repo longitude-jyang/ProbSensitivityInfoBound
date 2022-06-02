@@ -128,10 +128,6 @@ figName = 'cantilever'
 
 
 ```matlab:Code
-% export figures
-isExportFig = 1;
-paperPath = 'C:\Users\jy419\OneDrive - University Of Cambridge\Project\1.Working\1.DT-Overview\Papers\Fisher Sensitivity\Covariance sensitivity\figs';
-exportFig(isExportFig,paperPath,figName);
 ```
 
 
