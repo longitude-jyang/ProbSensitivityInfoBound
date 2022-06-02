@@ -8,7 +8,7 @@ Consider a function $\bf y = h(x)$ where the input is uncertain. Probabilistic s
 
 $$\begin{array}{l}
 \\
-{\left\|\frac{\partial P_{{\mathrm{f}}} \left(b,z\right)}{\partial b}\right\|}^2 \le {\mathrm{t}\mathrm{r}}\left\lbrace F\left(b\right)\right\rbrace \\
+{\left\|\frac{\partial P_{{\mathrm{f}}} \left(\mathbf b,z\right)}{\partial \mathbf b}\right\|}^2 \le {\mathrm{t}\mathrm{r}}\left\lbrace \mathbf F\left(\mathbf b\right)\right\rbrace \\
 \end{array}$$
 
 
